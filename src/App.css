@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}
+ul {
+  border: 1px solid #333;
+  width: 300px;
+  margin: 0 auto;
+}
+ul li {
+  position: relative;
+  padding-left: 30px;
+}
+ul li::before {
+  content: "123";
+  /* position: absolute;
+  top: 14px;
+  left: 5px; */
+  background-color: #333;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
