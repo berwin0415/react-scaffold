@@ -7,7 +7,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const resolve = require('resolve');
 const PnpWebpackPlugin = require('pnp-webpack-plugin');
@@ -235,10 +234,7 @@ module.exports = {
     // 路径错误直接报错
     new CaseSensitivePathsPlugin(),
     // 优化moment.js库的体积
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static'
-  })
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ],
   // 将一些在浏览器不起作用，但是在某些包中引用到的库置空
   node: {
