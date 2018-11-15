@@ -1,16 +1,15 @@
-import React from 'react';
-import{ connect } from 'react-redux';
-
-@connect((state)=>({
-    state
-}))
+import React from "react";
+import { connect } from "react-redux";
 class List extends React.Component {
-    render(){
-        console.log(this);
-        
-        return(
-            <div>List component</div>
-        )
-    }
+  render() {
+    return <div>List component</div>;
+  }
 }
-export default List;
+export default connect(
+  state => ({
+    state
+  }),
+  dispatch => ({
+    dispatch
+  })
+)(List);

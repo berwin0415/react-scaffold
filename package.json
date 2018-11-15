@@ -119,18 +119,9 @@
   "babel": {
     "presets": [
       "react-app"
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-syntax-decorators",
-        {
-          "decoratorsBeforeExport": true
-        }
-      ]
     ]
   },
   "devDependencies": {
-    "@babel/plugin-syntax-decorators": "^7.1.0",
     "webpack-bundle-analyzer": "^3.0.3"
   }
 }
