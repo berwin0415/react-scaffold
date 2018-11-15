@@ -14,7 +14,7 @@ import App from './App'
 import routes from './routes'
 const history = createBrowserHistory();
 
-const store = createStore(rootReducer,applyMiddleware(thunk))
+const store = createStore(rootReducer,applyMiddleware(thunk));
 
 ReactDOM.render((
     <Provider store={store}>

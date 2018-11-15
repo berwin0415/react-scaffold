@@ -6,5 +6,4 @@ const CommonIndex = (props) => {
         <div>common index</div>
     )
 }
-
-export default CommonIndex;
+export default CommonIndex; 
