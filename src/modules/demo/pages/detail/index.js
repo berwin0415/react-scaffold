@@ -4,13 +4,11 @@ import{ connect } from 'react-redux';
 @connect((state)=>({
     state
 }))
-class List extends React.Component {
+class Detail extends React.Component {
     render(){
-        console.log(this);
-        
         return(
-            <div>List component</div>
+            <div>detail component</div>
         )
     }
 }
-export default List;
+export default Detail;

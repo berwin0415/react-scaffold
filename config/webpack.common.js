@@ -40,7 +40,8 @@ module.exports = {
             .filter(ext => useTypeScript || !ext.includes('ts')),
         // 别名，非常重要的一个配置，它可以配置一些短路径
         alias: {
-            Client: relativePath('src/client')
+            Client: relativePath('src/client'),
+            Modules: relativePath('src/modules')
         }
     }
 
