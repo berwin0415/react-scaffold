@@ -123,5 +123,6 @@
   },
   "devDependencies": {
     "webpack-bundle-analyzer": "^3.0.3"
-  }
+  },
+  "proxy":"http://api.hanbw.top"
 }

@@ -9,11 +9,10 @@ import thunk from 'redux-thunk';
 import createBrowserHistory from "history/createBrowserHistory";
 
 import rootReducer from './store'
-
 import App from './App'
 import routes from './routes'
-const history = createBrowserHistory();
 
+const history = createBrowserHistory();
 const store = createStore(rootReducer,applyMiddleware(thunk));
 
 ReactDOM.render((
