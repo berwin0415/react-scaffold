@@ -122,7 +122,8 @@
     ]
   },
   "devDependencies": {
+    "mddir": "^1.1.1",
     "webpack-bundle-analyzer": "^3.0.3"
   },
-  "proxy":"http://api.hanbw.top"
+  "proxy": "http://api.hanbw.top"
 }
