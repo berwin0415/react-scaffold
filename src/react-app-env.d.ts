@@ -1,6 +1,8 @@
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
+/// <reference types="redux" />
+/// <reference types="react-redux" />
 
 declare namespace NodeJS {
   interface ProcessEnv {
