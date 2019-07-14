@@ -1,20 +1,22 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
-import Home from '$modules/home';
-import Demo from '$modules/demo';
+
+import routes from '../routes'
 
 const history = createBrowserHistory()
 
 const App: FC = () => {
+  useEffect(() => {
+    let a = "b"
+  }, [1])
   return (
     <div className="App">
       App component
       <Router history={history}>
         <Switch>
-          <Route path="/demo" component={Demo}></Route>
-          <Route path="/" component={Home}></Route>
+          {routes.map(item => <Route key={item.path} {...item}></Route>)}
         </Switch>
       </Router>
     </div>
