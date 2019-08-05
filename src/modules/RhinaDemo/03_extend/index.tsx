@@ -1,5 +1,5 @@
 import React, { useEffect, ReactNode } from 'react'
-import rhine from './dist/rhine.es5'
+import rhine from './dist/lib/index'
 import axios from 'axios'
 
 interface DemoProps {
@@ -41,7 +41,7 @@ const Index = ({ history }: DemoProps) => {
 
         // rhine.head('/api/v0/extend/head')
 
-        // rhine.post('/api/v0/extend/post', { msg: 'post' })
+        rhine.post('/api/v0/extend/post', { msg: 'post' })
 
         // rhine.put('/api/v0/extend/put', { msg: 'put' })
 

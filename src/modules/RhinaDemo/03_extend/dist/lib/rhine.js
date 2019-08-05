@@ -1,13 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Rhine_1 = require("./core/Rhine");
-var util_1 = require("./utils/util");
-function createInstance() {
-    var context = new Rhine_1.default();
-    var instance = Rhine_1.default.prototype.request.bind(context);
-    util_1.extend(instance, context);
+import Rhine from './core/Rhine';
+import { extend } from './utils/util';
+import defaults from './defaults';
+function createInstance(config) {
+    var context = new Rhine(config);
+    var instance = Rhine.prototype.request.bind(context);
+    extend(instance, context);
     return instance;
 }
-var rhine = createInstance();
-exports.default = rhine;
+var rhine = createInstance(defaults);
+export default rhine;
 //# sourceMappingURL=rhine.js.map

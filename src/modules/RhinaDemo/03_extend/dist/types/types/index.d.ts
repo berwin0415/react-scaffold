@@ -7,16 +7,17 @@ export interface RequestConfig {
     headers?: any;
     responseType?: XMLHttpRequestResponseType;
     timeout?: number;
+    [propName: string]: any;
 }
-export interface RhineResponse {
-    data: any;
+export interface RhineResponse<T = any> {
+    data: T;
     status: number;
     statusText: string;
     headers: any;
     config: RequestConfig;
     request: any;
 }
-export interface RhinePromise extends Promise<RhineResponse> {
+export interface RhinePromise<T = any> extends Promise<RhineResponse<T>> {
 }
 export interface RhineError extends Error {
     config?: RequestConfig;
@@ -25,16 +26,31 @@ export interface RhineError extends Error {
     response?: RhineResponse;
 }
 export interface Rhine {
-    request(config: RequestConfig): RhinePromise;
-    get(url: string, config?: RequestConfig): RhinePromise;
-    delete(url: string, config?: RequestConfig): RhinePromise;
-    head(url: string, config?: RequestConfig): RhinePromise;
-    options(url: string, config?: RequestConfig): RhinePromise;
-    post(url: string, data: any, config?: RequestConfig): RhinePromise;
-    put(url: string, data: any, config?: RequestConfig): RhinePromise;
-    patch(url: string, data: any, config?: RequestConfig): RhinePromise;
+    defaults: RequestConfig;
+    interceprors: {
+        request: RhineInterceptorManager<RequestConfig>;
+        response: RhineInterceptorManager<RhineResponse>;
+    };
+    request<T = any>(config: RequestConfig): RhinePromise<T>;
+    get<T = any>(url: string, config?: RequestConfig): RhinePromise<T>;
+    delete<T = any>(url: string, config?: RequestConfig): RhinePromise<T>;
+    head<T = any>(url: string, config?: RequestConfig): RhinePromise<T>;
+    options<T = any>(url: string, config?: RequestConfig): RhinePromise<T>;
+    post<T = any>(url: string, data: any, config?: RequestConfig): RhinePromise<T>;
+    put<T = any>(url: string, data: any, config?: RequestConfig): RhinePromise<T>;
+    patch<T = any>(url: string, data: any, config?: RequestConfig): RhinePromise<T>;
 }
 export interface RhineInstance extends Rhine {
-    (config: RequestConfig): RhinePromise;
-    (url: string, config?: RequestConfig): RhinePromise;
+    <T = any>(config: RequestConfig): RhinePromise<T>;
+    <T = any>(url: string, config?: RequestConfig): RhinePromise<T>;
+}
+export interface RhineInterceptorManager<T> {
+    use(resolved: ResolvedFn<T>, rejected?: RejectedFn): number;
+    eject(id: number): void;
+}
+export interface ResolvedFn<T> {
+    (val: T): T | Promise<T>;
+}
+export interface RejectedFn {
+    (error: any): any;
 }
