@@ -4,6 +4,7 @@ import Base from './01_base'
 import ErrorModule from './02_error'
 import Extend from './03_extend'
 import Config from './05-config'
+import Cancel from './06-cancel'
 
 export default [{
     title: "rhine base",
@@ -25,6 +26,10 @@ export default [{
     title: "rhine demo",
     path: "/rhine/config",
     component: Config
+},{
+    title: "rhine demo",
+    path: "/rhine/cancel",
+    component: Cancel
 },{
     title: "rhine demo",
     path: "/rhine",

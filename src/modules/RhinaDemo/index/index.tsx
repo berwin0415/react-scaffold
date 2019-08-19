@@ -15,6 +15,7 @@ const index = ({ history }: DemoProps) => {
             <li onClick={() => history.push('/rhine/error')}> 02 error</li>
             <li onClick={() => history.push('/rhine/extend')}> 03 extend</li>
             <li onClick={() => history.push('/rhine/config')}> 05 config</li>
+            <li onClick={() => history.push('/rhine/cancel')}> 06 cancel</li>
         </ul>
     </div>
 }
