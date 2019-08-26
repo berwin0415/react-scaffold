@@ -13,7 +13,7 @@ const App: FC = () => {
   }, [1])
   return (
     <div className="App">
-      App component
+      <div>App component</div>
       <Router history={history}>
         <Switch>
           {routes.map(item => <Route key={item.path} {...item}></Route>)}

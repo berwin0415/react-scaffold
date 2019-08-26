@@ -5,6 +5,9 @@
   "dependencies": {
     "@babel/core": "7.4.3",
     "@svgr/webpack": "4.1.0",
+    "@tensorflow/tfjs": "^1.2.7",
+    "@tensorflow/tfjs-vis": "^1.1.0",
+    "@types/d3": "^5.7.2",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.2",
     "@types/react": "16.8.23",
@@ -22,8 +25,10 @@
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "2.1.1",
+    "d3": "^5.9.7",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
+    "echarts": "^4.2.1",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",
     "eslint-loader": "2.1.2",
@@ -144,8 +149,9 @@
     ]
   },
   "devDependencies": {
+    "@types/echarts": "^4.1.10",
     "@types/qs": "^6.5.3",
-    "@types/react-router-dom": "^4.3.4",
+    "@types/react-router-dom": "^4.3.5",
     "@types/webpack": "^4.4.34"
   },
   "proxy": "http://demo.hanbw.top"

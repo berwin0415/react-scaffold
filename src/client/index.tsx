@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';
+class Demo extends Component {
+    render(){
+        return <div>class </div>
+    }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
