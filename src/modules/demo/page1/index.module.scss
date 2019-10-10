@@ -1,0 +1,14 @@
+.page1 {
+    font-size: 30px;
+    .box1 {
+
+        background: #ccc;
+    }
+    .active {
+        background: red;
+    }
+}
+.animate {
+    transition: all 1s;
+    // height: 300px;
+}

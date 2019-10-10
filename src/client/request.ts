@@ -1,9 +1,8 @@
 import axios from 'axios'
 
 const request = axios.create({
-    baseURL: '/api/v0/',
+    baseURL: '/api/',
     timeout: 1000,
-
 });
 
 request.interceptors.request.use(function (config) {

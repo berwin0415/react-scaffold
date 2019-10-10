@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router";
 import { Layout } from "antd";
+import Menu from './menu'
 
 const { Header, Sider, Content } = Layout;
 
@@ -11,7 +12,7 @@ export default function index(props: any) {
     <Layout style={{minHeight:"100vh"}}>
       <Header style = {{background:"#ffffff"}}>header</Header>
       <Layout>
-        <Sider collapsible>Sider</Sider>
+        <Sider collapsible><Menu></Menu></Sider>
         <Content>
           <Switch>
             {routes.map((item: any) => (
