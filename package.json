@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "0.6.2",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -69,8 +69,8 @@
     "ts-pnp": "1.2.0",
     "url-loader": "4.1.1",
     "web-vitals": "^0.2.4",
-    "webpack": "4.44.2",
-    "webpack-dev-server": "3.11.0",
+    "webpack": "5.107.2",
+    "webpack-dev-server": "5.2.4",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "5.1.4"
   },
